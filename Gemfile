@@ -9,4 +9,7 @@ end
 
 group :test do
   gem 'rake'
+  gem 'sinatra'
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
