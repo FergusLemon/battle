@@ -12,4 +12,5 @@ group :test do
   gem 'sinatra'
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'shotgun'
 end
