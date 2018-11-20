@@ -1,5 +1,12 @@
 module MyCapybaraHelper
 
+  def enter_names(*names)
+    visit '/'
+    fill_in 'Player 1', with: names[0]
+    fill_in 'Player 2', with: names[1]
+    click_on 'Submit'
+  end
+
   #thanks to Yanis Triandaphilov for the recommendation, sourced from his blog
   #https://blog.codeship.com/principles-of-effective-testing-with-capybara/
   def should_see(text)
