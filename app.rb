@@ -1,7 +1,10 @@
 require 'sinatra/base'
 
 class Battle < Sinatra::Base
-  enable :sessions
+  configure do
+    enable :sessions
+    set :session_secret, ENV.fetch('SESSION_SECRET')
+  end
 
   get '/' do
     erb :index
