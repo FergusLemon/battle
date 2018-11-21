@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require File.join(File.dirname(__FILE__),'lib','player')
 
 class Battle < Sinatra::Base
   configure do
@@ -13,14 +14,14 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    session[:player_1] = params[:player_1_name]
-    session[:player_2] = params[:player_2_name]
+    $player_1 = Player.new(params[:player_1_name])
+    $player_2 = Player.new(params[:player_2_name])
     redirect '/play'
   end
 
   get '/play' do
-    @player_1 = session[:player_1]
-    @player_2 = session[:player_2]
+    @player_1 = $player_1.name
+    @player_2 = $player_2.name
     @player_1_hit_points = INITIAL_HIT_POINTS
     @player_2_hit_points = INITIAL_HIT_POINTS
     erb :play
