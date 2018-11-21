@@ -25,4 +25,12 @@ class Battle < Sinatra::Base
     @player_2_hit_points = INITIAL_HIT_POINTS
     erb :play
   end
+
+  get '/attack' do
+    @player_1 = session[:player_1]
+    @player_2 = session[:player_2]
+    session[:message] = 'Good Hit!'
+    @message = session[:message]
+    erb :attack
+  end
 end

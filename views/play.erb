@@ -2,6 +2,11 @@
   <%= "Player 1 is #{@player_1}" %>
   <%= "Player 1 Hit Points = #{@player_1_hit_points}" %>
 </div>
+<form action='/attack' method='get'>
+  <div class=button>
+    <button type='submit'>Attack</button>
+  </div>
+</form>
 <div>
   <%= "Player 2 is #{@player_2}" %>
   <%= "Player 2 Hit Points = #{@player_2_hit_points}" %>
