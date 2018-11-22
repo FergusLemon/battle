@@ -28,6 +28,7 @@ class Battle < Sinatra::Base
   get '/attack' do
     session[:message] = 'Good Hit!'
     @message = session[:message]
+    $player_2.incur_damage
     erb :attack
   end
 end
