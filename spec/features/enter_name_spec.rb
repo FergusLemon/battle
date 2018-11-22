@@ -7,4 +7,10 @@ feature 'Entering names' do
     should_see 'Player 1 is Angelina'
     should_see 'Player 2 is Brad'
   end
+
+  scenario 'Players leave their names blank' do
+    visit '/'
+    enter_names
+    should_see 'Mystery Player'
+  end
 end
