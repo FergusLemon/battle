@@ -23,4 +23,10 @@ describe Player do
       expect(described_class::HIT_POINTS).to eq(100)
     end
   end
+
+  describe '#hit_points' do
+    it 'tells a player how many hit points they have' do
+      expect(player.hit_points).to eq(described_class::HIT_POINTS)
+    end
+  end
 end
