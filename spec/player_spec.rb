@@ -19,5 +19,8 @@ describe Player do
     it 'is a constant for each player at the start of a battle' do
       expect(player).to have_constant(:HIT_POINTS)
     end
+    it 'has a value of 100 by default' do
+      expect(described_class::HIT_POINTS).to eq(100)
+    end
   end
 end
