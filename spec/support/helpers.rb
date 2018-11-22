@@ -7,6 +7,11 @@ module MyCapybaraHelper
     click_on 'Submit'
   end
 
+  def initiate_an_attack
+    enter_names('Jane', 'Peter')
+    click_on 'Attack'
+  end
+
   #thanks to Yanis Triandaphilov for the recommendation, sourced from his blog
   #https://blog.codeship.com/principles-of-effective-testing-with-capybara/
   def should_see(text)
