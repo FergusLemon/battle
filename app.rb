@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require File.join(File.dirname(__FILE__),'lib','player')
+require File.join(File.dirname(__FILE__),'lib','game')
 
 class Battle < Sinatra::Base
   configure do
