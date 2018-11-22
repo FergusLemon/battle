@@ -29,4 +29,13 @@ describe Player do
       expect(player.hit_points).to eq(described_class::HIT_POINTS)
     end
   end
+
+  describe 'NORMAL_HIT' do
+    it 'is a constant for each player throughout' do
+      expect(player).to have_constant(:NORMAL_HIT)
+    end
+    it 'has a value of 10 by default' do
+      expect(described_class::NORMAL_HIT).to eq(10)
+    end
+  end
 end

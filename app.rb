@@ -7,8 +7,6 @@ class Battle < Sinatra::Base
     set :session_secret, ENV.fetch('SESSION_SECRET') { SecureRandom.hex(64) }
   end
 
-  INITIAL_HIT_POINTS = 100
-
   get '/' do
     erb :index
   end
@@ -22,8 +20,8 @@ class Battle < Sinatra::Base
   get '/play' do
     @player_1 = $player_1.name
     @player_2 = $player_2.name
-    @player_1_hit_points = INITIAL_HIT_POINTS
-    @player_2_hit_points = INITIAL_HIT_POINTS
+    @player_1_hit_points = $player_1.hit_points
+    @player_2_hit_points = $player_2.hit_points
     erb :play
   end
 

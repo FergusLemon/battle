@@ -1,6 +1,7 @@
 class Player
 
   HIT_POINTS = 100
+  NORMAL_HIT = 10
 
   def initialize(name='Mystery Player')
     @name = name
@@ -14,4 +15,5 @@ class Player
   def hit_points
     @hit_points.dup
   end
+
 end
