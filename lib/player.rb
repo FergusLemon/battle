@@ -1,6 +1,6 @@
 class Player
 
-  def initialize(name)
+  def initialize(name='Mystery Player')
     @name = name
   end
 
