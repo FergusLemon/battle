@@ -13,4 +13,12 @@ describe Game do
       expect(game.player_2).to eq(other_player_klass)
     end
   end
+
+  describe '#attack' do
+    it 'it sends a message to players' do
+      allow(player_klass).to receive(:incur_damage)
+      expect(player_klass).to receive(:incur_damage)
+      game.attack(player_klass)
+    end
+  end
 end

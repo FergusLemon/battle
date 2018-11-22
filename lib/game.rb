@@ -12,4 +12,8 @@ class Game
   def player_2
     @player_2
   end
+
+  def attack(player)
+    player.incur_damage
+  end
 end
