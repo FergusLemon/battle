@@ -39,13 +39,6 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it 'damages the player' do
-      expect(mystery_player).to receive(:incur_damage)
-      player.attack(mystery_player)
-    end
-  end
-
   describe '#incur_damage' do
     it 'decreases players hit points' do
       expect { player.incur_damage }.to change { player.hit_points }

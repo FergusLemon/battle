@@ -16,10 +16,6 @@ class Player
     @hit_points.dup
   end
 
-  def attack(player)
-    player.incur_damage
-  end
-
   def incur_damage
     @hit_points -= NORMAL_HIT
   end
