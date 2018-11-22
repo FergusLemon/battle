@@ -14,4 +14,10 @@ describe Player do
       expect(mystery_player.name).to eq(mystery_name)
     end
   end
+
+  describe 'HIT_POINTS' do
+    it 'is a constant for each player at the start of a battle' do
+      expect(player).to have_constant(:HIT_POINTS)
+    end
+  end
 end
