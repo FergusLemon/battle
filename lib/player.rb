@@ -16,4 +16,7 @@ class Player
     @hit_points.dup
   end
 
+  def incur_damage
+    @hit_points -= NORMAL_HIT
+  end
 end

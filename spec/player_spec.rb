@@ -38,4 +38,10 @@ describe Player do
       expect(described_class::NORMAL_HIT).to eq(10)
     end
   end
+
+  describe '#incur_damage' do
+    it 'decreases players hit points' do
+      expect { player.incur_damage }.to change { player.hit_points }
+    end
+  end
 end
