@@ -32,4 +32,16 @@ describe Game do
       expect(game.attacker).to eq(player_2)
     end
   end
+
+  describe '#over?' do
+    it 'returns true when player 1 has zero hit points' do
+      allow(player_1).to receive(:hit_points).and_return(0)
+      expect(game.over?).to be true
+    end
+    it 'returns true when player 2 has zero hit points' do
+      allow(player_1).to receive(:hit_points).and_return(10)
+      allow(player_2).to receive(:hit_points).and_return(0)
+      expect(game.over?).to be true
+    end
+  end
 end
