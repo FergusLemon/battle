@@ -31,9 +31,16 @@ class Game
     switch_turns
   end
 
+  def over?
+    player_on_zero?
+  end
   private
 
   def switch_turns
     @attacker, @defender = @defender, @attacker
+  end
+
+  def player_on_zero?
+    @players.any? { |p| p.hit_points == 0 }
   end
 end
