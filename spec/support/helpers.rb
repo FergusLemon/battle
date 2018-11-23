@@ -7,9 +7,9 @@ module MyCapybaraHelper
     click_on 'Submit'
   end
 
-  def initiate_an_attack
-    enter_names('Jane', 'Peter')
+  def attack_and_return
     click_on 'Attack'
+    click_on 'Back To Battle'
   end
 
   #thanks to Yanis Triandaphilov for the recommendation, sourced from his blog
