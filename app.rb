@@ -27,7 +27,7 @@ class Battle < Sinatra::Base
   get '/attack' do
     session[:message] = 'Good Hit!'
     @message = session[:message]
-    $game.attack($game.player_2)
+    $game.attack($game.defender)
     erb :attack
   end
 end
