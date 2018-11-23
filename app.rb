@@ -20,14 +20,21 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    @game = $game
-    erb :play
+    unless $game.over?
+      @game = $game
+      erb :play
+    else
+      redirect '/result'
+    end
   end
 
   get '/attack' do
-    session[:message] = 'Good Hit!'
-    @message = session[:message]
     $game.attack($game.defender)
     erb :attack
+  end
+
+  get '/result' do
+    @game = $game
+    erb :result
   end
 end
