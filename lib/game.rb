@@ -5,10 +5,11 @@ class Game
     @players = [player_1, player_2]
     @attacker = @players.first
     @defender = @players.last
+    @@games << self
   end
 
   def self.games
-    @@games.dup
+    @@games
   end
 
   def players

@@ -5,6 +5,15 @@ describe Game do
   let(:player_1) { double('Player 1') }
   let(:player_2) { double('Player 2') }
 
+  describe '@@games' do
+    it 'is a class variable for storing games' do
+      expect(described_class.games).not_to be_empty
+    end
+    it 'stores instances of games' do
+      expect(described_class.games).to include(game)
+    end
+  end
+
   context 'on initialization' do
     it 'has a player 1' do
       expect(game.players.first).to eq(player_1)
@@ -42,12 +51,6 @@ describe Game do
       allow(player_1).to receive(:hit_points).and_return(10)
       allow(player_2).to receive(:hit_points).and_return(0)
       expect(game.over?).to be true
-    end
-  end
-
-  describe '@@games' do
-    it 'is a class variable for storing games' do
-      expect(described_class.games).to be_empty
     end
   end
 end
