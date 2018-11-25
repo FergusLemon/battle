@@ -8,6 +8,10 @@ class Battle < Sinatra::Base
     set :session_secret, ENV.fetch('SESSION_SECRET') { SecureRandom.hex(64) }
   end
 
+  before do
+    @game = Game.games.last
+  end
+
   get '/' do
     erb :index
   end
@@ -15,26 +19,24 @@ class Battle < Sinatra::Base
   post '/names' do
     player_1 = Player.new(params[:player_1_name])
     player_2 = Player.new(params[:player_2_name])
-    $game = Game.new(player_1, player_2)
+    game = Game.new(player_1, player_2)
     redirect '/play'
   end
 
   get '/play' do
-    unless $game.over?
-      @game = $game
-      erb :play
-    else
+    if @game.over?
       redirect '/result'
+    else
+      erb :play
     end
   end
 
   get '/attack' do
-    $game.attack($game.defender)
+    @game.attack(@game.defender)
     erb :attack
   end
 
   get '/result' do
-    @game = $game
     erb :result
   end
 end
