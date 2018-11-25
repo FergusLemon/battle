@@ -9,7 +9,7 @@ class Game
   end
 
   def self.games
-    @@games
+    @@games.dup
   end
 
   def players

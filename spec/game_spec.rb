@@ -9,8 +9,9 @@ describe Game do
     it 'is a class variable for storing games' do
       expect(described_class.games).not_to be_empty
     end
-    it 'stores instances of games' do
-      expect(described_class.games).to include(game)
+    it 'cannot be tampered with' do
+      described_class.games << :invalid
+      expect(described_class.games).not_to include(:invalid)
     end
   end
 
