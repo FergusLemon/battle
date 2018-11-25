@@ -44,4 +44,10 @@ describe Game do
       expect(game.over?).to be true
     end
   end
+
+  describe '@@games' do
+    it 'is a class variable for storing games' do
+      expect(described_class.games).to be_empty
+    end
+  end
 end
