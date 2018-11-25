@@ -43,5 +43,9 @@ describe Player do
     it 'decreases players hit points' do
       expect { player.incur_damage }.to change { player.hit_points }
     end
+    it 'does not reduce hit points below zero' do
+      11.times { player.incur_damage }
+      expect(player.hit_points).to be >= 0
+    end
   end
 end

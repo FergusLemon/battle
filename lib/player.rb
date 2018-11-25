@@ -17,6 +17,10 @@ class Player
   end
 
   def incur_damage
-    @hit_points -= NORMAL_HIT
+    if @hit_points < NORMAL_HIT
+      @hit_points = 0
+    else
+      @hit_points -= NORMAL_HIT
+    end
   end
 end
