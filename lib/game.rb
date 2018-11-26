@@ -33,6 +33,7 @@ class Game
   end
 
   def attack(player)
+    raise 'You cannot attack, this game is over.' if over?
     player.incur_damage
     switch_turns
   end
