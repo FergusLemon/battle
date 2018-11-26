@@ -31,15 +31,25 @@ describe Game do
   end
 
   describe '#attack' do
-    it 'sends a message to players' do
+    before do
+      allow(player_1).to receive(:hit_points)
+      allow(player_2).to receive(:hit_points)
       allow(player_1).to receive(:incur_damage)
+      allow(player_2).to receive(:incur_damage)
+    end
+    it 'sends a message to players' do
       expect(player_1).to receive(:incur_damage)
       game.attack(player_1)
     end
     it 'switches the active player' do
-      allow(player_2).to receive(:incur_damage)
       game.attack(player_2)
       expect(game.attacker).to eq(player_2)
+    end
+    context 'when the game is over' do
+      it 'raises an error' do
+        allow(game).to receive(:over?).and_return(true)
+        expect { game.attack(player_1) }.to raise_error( 'You cannot attack, this game is over.' )
+      end
     end
   end
 
