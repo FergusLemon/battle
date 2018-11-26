@@ -18,11 +18,8 @@ class Player
   end
 
   def incur_damage
-    if random_damage <= @hit_points
-      @hit_points -= random_damage
-    else
-      @hit_points = 0
-    end
+    hit = random_damage
+    hit > @hit_points ? @hit_points = 0 : @hit_points -= hit
   end
 
   private
