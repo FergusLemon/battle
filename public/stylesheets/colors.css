@@ -1,3 +1,23 @@
-body {
+.player-registration {
   background-color: whitesmoke
+}
+
+.player-1 {
+  background-color: whitesmoke
+}
+
+.player-2 {
+  background-color: whitesmoke
+}
+
+.battleground {
+  background-color: crimson
+}
+
+.player-1-info {
+  background-color: crimson
+  }
+
+.player-2-info {
+  background-color: crimson
 }

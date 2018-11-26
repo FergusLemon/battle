@@ -1,13 +1,15 @@
-<div>
-  <%= "Player 1 is #{@game.player_1.name}" %>
-  <%= "Player 1 Hit Points = #{@game.player_1.hit_points}" %>
-</div>
-<form action='/attack' method='get'>
-  <div class=button>
-    <button type='submit'>Attack</button>
+<body class='battleground'>
+  <div class='player-1-info'>
+    <%= "Player 1 is #{@game.player_1.name}" %>
+    <%= "Player 1 Hit Points = #{@game.player_1.hit_points}" %>
   </div>
-</form>
-<div>
-  <%= "Player 2 is #{@game.player_2.name}" %>
-  <%= "Player 2 Hit Points = #{@game.player_2.hit_points}" %>
-</div>
+  <form action='/attack' method='get'>
+    <div class=button>
+      <button type='submit'>Attack</button>
+    </div>
+  </form>
+  <div class='player-2-info'>
+    <%= "Player 2 is #{@game.player_2.name}" %>
+    <%= "Player 2 Hit Points = #{@game.player_2.hit_points}" %>
+  </div>
+<body/>
