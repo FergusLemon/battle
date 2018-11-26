@@ -1,9 +1,7 @@
 feature 'Switching turns' do
   scenario 'after one player attacks it is the turn of the next player' do
-    enter_names
-    2.times do
-      attack_and_return
-    end
-    should_see 'Player 1 Hit Points = 90'
+    enter_names('First Player', 'Second Player')
+    click_on 'Attack'
+    should_see "Second Player, it's your turn to attack now."
   end
 end
