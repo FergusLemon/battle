@@ -11,13 +11,28 @@
 }
 
 .battleground {
-  background-color: crimson
+  background-color: whitesmoke;
 }
 
-.player-1-info {
-  background-color: crimson
-  }
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  font-style: normal;
+  font-size: 30px;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
 
-.player-2-info {
-  background-color: crimson
+.left {
+  background-color: crimson;
+  left: 0;
+}
+
+.right {
+  background-color: cornflowerblue;
+  right: 0;
 }
