@@ -5,6 +5,7 @@ describe Player do
   let(:mystery_name) { 'Mystery Player' }
   let(:player) { described_class.new(name)}
   let(:mystery_player) { described_class.new }
+  let(:max_points) { described_class::HIT_POINTS }
 
   describe '#name' do
     it 'knows its own name' do
@@ -44,7 +45,7 @@ describe Player do
       expect { player.incur_damage }.to change { player.hit_points }
     end
     it 'does not reduce hit points below zero' do
-      11.times { player.incur_damage }
+      max_points.times { player.incur_damage }
       expect(player.hit_points).to be >= 0
     end
   end
