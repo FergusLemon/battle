@@ -2,6 +2,7 @@ class Player
 
   HIT_POINTS = 100
   NORMAL_HIT = 10
+  DAMAGE_RANGE = (1..100)
 
   def initialize(name='Mystery Player')
     @name = name
@@ -17,10 +18,16 @@ class Player
   end
 
   def incur_damage
-    if @hit_points < NORMAL_HIT
-      @hit_points = 0
+    if random_damage <= @hit_points
+      @hit_points -= random_damage
     else
-      @hit_points -= NORMAL_HIT
+      @hit_points = 0
     end
+  end
+
+  private
+
+  def random_damage
+    rand(DAMAGE_RANGE)
   end
 end
