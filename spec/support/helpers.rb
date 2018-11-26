@@ -17,4 +17,8 @@ module MyCapybaraHelper
   def should_see(text)
     expect(page).to have_content(text)
   end
+
+  def should_not_see(text)
+    expect(page).not_to have_content(text)
+  end
 end
