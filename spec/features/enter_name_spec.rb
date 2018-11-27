@@ -1,8 +1,8 @@
 feature 'Entering names' do
   scenario 'Players can enter and submit their names' do
     visit '/'
-    should_see 'Player 1 - Enter name:'
-    should_see 'Player 2 - Enter name:'
+    should_see 'Player 1'
+    should_see 'Player 2'
     enter_names('Angelina', 'Brad')
     should_see 'Player 1 is Angelina'
     should_see 'Player 2 is Brad'
