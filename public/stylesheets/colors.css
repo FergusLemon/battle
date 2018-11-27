@@ -1,17 +1,5 @@
-.player-registration {
+.player-registration, .player-1, .player-2 {
   background-color: whitesmoke
-}
-
-.player-1 {
-  background-color: whitesmoke
-}
-
-.player-2 {
-  background-color: whitesmoke
-}
-
-.battleground {
-  background-color: whitesmoke;
 }
 
 .split {
