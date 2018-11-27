@@ -25,14 +25,19 @@
   font-style: normal;
   font-size: 30px;
   font-family: "Arial Black", Gadget, sans-serif;
+  padding-top: 200;
+  padding-left: 20;
+  padding-right: 20;
 }
 
 .left {
-  background-color: crimson;
+  background-color: #E74C3C;
+  color: #444;
   left: 0;
 }
 
 .right {
   background-color: cornflowerblue;
+  color: #F7F9F9;
   right: 0;
 }
