@@ -16,4 +16,10 @@ feature 'Attacking opponents' do
     attack_and_return
     should_not_see 'Player 2 Hit Points = 100'
   end
+
+  scenario 'Has a branded header' do
+    enter_names
+    click_on 'Attack'
+    should_see 'Battleground II'
+  end
 end
