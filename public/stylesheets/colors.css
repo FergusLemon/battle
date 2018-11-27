@@ -1,5 +1,15 @@
-.player-registration, .player-1, .player-2 {
-  background-color: whitesmoke
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #444;
+  background-color: #F0F3F4;
+}
+
+header > * {
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, Times, serif;
 }
 
 .split {

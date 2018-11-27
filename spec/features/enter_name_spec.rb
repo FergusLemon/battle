@@ -18,9 +18,4 @@ feature 'Entering names' do
     visit '/'
     should_see 'Welcome to the Battleground'
   end
-
-  scenario 'Has styling on the header' do
-    visit '/'
-    expect(page).to have_css('h1.title')
-  end
 end
