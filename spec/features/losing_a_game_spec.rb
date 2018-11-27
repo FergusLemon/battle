@@ -10,5 +10,6 @@ feature 'Losing a game' do
   scenario 'Has a branded header' do
     enter_names
     should_see 'Battleground II'
+    expect(page).to have_css('h1.title')
   end
 end

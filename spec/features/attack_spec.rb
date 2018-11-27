@@ -21,5 +21,6 @@ feature 'Attacking opponents' do
     enter_names
     click_on 'Attack'
     should_see 'Battleground II'
+    expect(page).to have_css('h1.title')
   end
 end
