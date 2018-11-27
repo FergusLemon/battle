@@ -13,4 +13,9 @@ feature 'Entering names' do
     enter_names
     should_see 'Mystery Player'
   end
+
+  scenario 'Welcome message on arrival' do
+    visit '/'
+    should_see 'Welcome to the Battleground'
+  end
 end
