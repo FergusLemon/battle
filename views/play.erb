@@ -1,7 +1,7 @@
 <body>
   <div class='split left'>
-      <p id="player_1_play"><%= "Player 1: #{@game.player_1.name}" %></p>
-    <%= "Player 1 Hit Points = #{@game.player_1.hit_points}" %>
+      <p id="player-1-play"><%="Player 1: #{@game.player_1.name}"%></p>
+      <p id="player-1-hit-points"><%="#{@game.player_1.hit_points}"%></p>
     <form action='/attack' method='get'>
       <div class=button>
         <button type='submit'>Attack</button>
@@ -9,7 +9,7 @@
     </form>
   </div>
   <div class='split right'>
-      <p id="player_2_play"><%= "Player 2: #{@game.player_2.name}" %></p>
-    <%= "Player 2 Hit Points = #{@game.player_2.hit_points}" %>
+      <p id="player-2-play"><%="Player 2: #{@game.player_2.name}"%></p>
+      <p id="player-2-hit-points"><%="#{@game.player_2.hit_points}"%></p>
   </div>
 <body/>
