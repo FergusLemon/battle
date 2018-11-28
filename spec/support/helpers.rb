@@ -2,8 +2,8 @@ module MyCapybaraHelper
 
   def enter_names(*names)
     visit '/'
-    fill_in 'Player 1', with: names[0] ||= 'Mystery Player'
-    fill_in 'Player 2', with: names[1] ||= 'Mystery Player'
+    fill_in 'player1', with: names[0] ||= 'Mystery Player'
+    fill_in 'player2', with: names[1] ||= 'Mystery Player'
     click_on 'Submit'
   end
 
