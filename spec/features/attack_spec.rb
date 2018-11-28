@@ -8,7 +8,8 @@ feature 'Attacking opponents' do
   scenario 'After an attack return to battle ground' do
     enter_names
     attack_and_return
-    should_see 'Player 1 Hit Points'
+    should_see 'Player 1:'
+    should_see 'Player 2:'
   end
 
   scenario "An attack reduces a player's hit points" do
