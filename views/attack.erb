@@ -2,8 +2,8 @@
   <h1>Battleground II</h1>
 </header>
 <div>
-  <%= "Good Hit!" %>
-  <%= "#{@game.attacker.name}, it's your turn to attack now." %>
+  <p id="attack-confirmation"><%="Good Hit!"%></p>
+  <p id="player-message"><%="#{@game.attacker.name}, it's your turn to attack now."%></p>
 </div>
 <form action='/play' method='get'>
   <div class=button>

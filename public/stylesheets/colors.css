@@ -105,3 +105,13 @@ input:placeholder-shown {
   position: absolute;
   top: 150px;
 }
+
+#attack-confirmation {
+  font-size: 100px;
+  text-align: center;
+}
+
+#player-message {
+  font-size: 75px;
+  text-align: center;
+}
