@@ -2,6 +2,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   color: #444;
   background-color: #F0F3F4;
+  margin: 0;
 }
 
 header > * {
@@ -109,6 +110,8 @@ input:placeholder-shown {
 #attack-confirmation {
   font-size: 100px;
   text-align: center;
+  background-color: #444;
+  color: #F7F9F7;
 }
 
 #player-message {
