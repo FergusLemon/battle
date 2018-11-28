@@ -25,6 +25,20 @@ h1, h2, h3, h4, h5, h6 {
 input {
   width: 60%;
   height: 50px;
+  font-size: 30px;
+  font-family: Helvetica, Verdana, sans-serif;
+}
+
+input::placeholder {
+  color: #17202A;
+  font-size: 30px;
+  font-family: Helvetica, Verdana, sans-serif;
+}
+
+input:placeholder-shown {
+  color: #17202A;
+  font-size: 20px;
+  font-family: Helvetica, Verdana, sans-serif;
 }
 
 .button {
@@ -53,7 +67,7 @@ input {
 
 .left {
   background-color: #E74C3C;
-  color: #444;
+  color: #F7F9F9;
   left: 0;
 }
 
