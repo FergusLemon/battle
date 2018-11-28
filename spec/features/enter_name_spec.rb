@@ -4,8 +4,8 @@ feature 'Entering names' do
     should_see 'Player 1'
     should_see 'Player 2'
     enter_names('Angelina', 'Brad')
-    should_see 'Player 1 is Angelina'
-    should_see 'Player 2 is Brad'
+    should_see 'Player 1: Angelina'
+    should_see 'Player 2: Brad'
   end
 
   scenario 'Players leave their names blank' do
