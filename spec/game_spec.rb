@@ -6,9 +6,6 @@ describe Game do
   let(:player_2) { double('Player 2') }
 
   describe '@@games' do
-    it 'is a class variable for storing games' do
-      expect(described_class.games).not_to be_empty
-    end
     it 'cannot be tampered with' do
       described_class.games << :invalid
       expect(described_class.games).not_to include(:invalid)
