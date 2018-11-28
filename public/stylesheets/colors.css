@@ -81,3 +81,17 @@ input:placeholder-shown {
   color: #F7F9F7;
   right: 0;
 }
+
+#player_1_play, #player_2_play {
+  font-size: 50px;
+  position: fixed;
+  top: 5;
+}
+
+#player_1_play {
+  left: 250;
+}
+
+#player_2_play {
+  right: 250;
+}
