@@ -5,6 +5,13 @@ describe Game do
   let(:player_1) { double('Player 1') }
   let(:player_2) { double('Player 2') }
 
+  before do
+    allow(player_1).to receive(:hit_points)
+    allow(player_2).to receive(:hit_points)
+    allow(player_1).to receive(:incur_damage)
+    allow(player_2).to receive(:incur_damage)
+  end
+
   context 'on initialization' do
     it 'has a player 1' do
       expect(game.players.first).to eq(player_1)
@@ -31,12 +38,6 @@ describe Game do
   end
 
   describe '#attack' do
-    before do
-      allow(player_1).to receive(:hit_points)
-      allow(player_2).to receive(:hit_points)
-      allow(player_1).to receive(:incur_damage)
-      allow(player_2).to receive(:incur_damage)
-    end
     it 'sends a message to players' do
       expect(player_1).to receive(:incur_damage)
       game.attack(player_1)
@@ -62,6 +63,13 @@ describe Game do
       allow(player_1).to receive(:hit_points).and_return(10)
       allow(player_2).to receive(:hit_points).and_return(0)
       expect(game.over?).to be true
+    end
+  end
+
+  describe '#winner' do
+    it 'returns the winner of the game' do
+      allow(player_1).to receive(:hit_points).and_return(0)
+      expect(game.winner).to eq(player_2)
     end
   end
 end
