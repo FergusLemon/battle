@@ -11,4 +11,10 @@ feature 'Losing a game' do
     enter_names
     should_see 'Battleground II'
   end
+
+  scenario 'Starting a new game' do
+    enter_names
+    click_on 'Play Again'
+    should_see 'Welcome'
+  end
 end
