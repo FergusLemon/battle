@@ -101,12 +101,12 @@ input:placeholder-shown {
   color: #F7F9F7;
 }
 
-#player-message {
+#player-message, #result-message {
   font-size: 75px;
   text-align: center;
 }
 
-#attack, #back-to-battle {
+#enter-names, #attack, #back-to-battle {
   position: absolute;
   z-index: 1;
   border-radius: 12px;
