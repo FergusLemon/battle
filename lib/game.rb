@@ -5,6 +5,7 @@ class Game
     @players = [player_1, player_2]
     @attacker = @players.first
     @defender = @players.last
+    @winner = nil
     @@games << self
   end
 
@@ -30,6 +31,10 @@ class Game
 
   def defender
     @defender
+  end
+
+  def winner
+    @winner
   end
 
   def attack(player)
