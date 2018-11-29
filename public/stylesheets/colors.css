@@ -87,14 +87,6 @@ input:placeholder-shown {
   top: 5;
 }
 
-#player-1-play {
-  left: 25;
-}
-
-#player-2-play {
-  right: 300;
-}
-
 #player-1-hit-points, #player-2-hit-points {
   font-size: 200px;
   padding-left: 200px;
@@ -114,13 +106,14 @@ input:placeholder-shown {
   text-align: center;
 }
 
-#back-to-battle {
+#attack, #back-to-battle {
   position: absolute;
+  z-index: 1;
   border-radius: 12px;
   width: 200;
   height: 50;
   top: 65%;
-  left: 50%;
+  left: 712px;
   color: black;
   font-size: 20px;
 }
