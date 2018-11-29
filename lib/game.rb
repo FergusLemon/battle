@@ -34,7 +34,7 @@ class Game
   end
 
   def winner
-    @winner
+    over? ? set_winner : @winner
   end
 
   def attack(player)
@@ -46,6 +46,7 @@ class Game
   def over?
     player_on_zero?
   end
+
   private
 
   def switch_turns
@@ -54,5 +55,9 @@ class Game
 
   def player_on_zero?
     @players.any? { |p| p.hit_points == 0 }
+  end
+
+  def set_winner
+    @players.reject { |p| p.hit_points == 0 }.first
   end
 end
