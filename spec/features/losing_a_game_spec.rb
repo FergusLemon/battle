@@ -8,6 +8,9 @@ feature 'Losing a game' do
     should_see '0'
   end
 
+# As a Player,
+# So I can Lose a game of Battle,
+# I want to see a 'Lose' message if I reach 0HP first
   scenario 'Player 2 loses the game' do
     enter_names_and_attack
     should_see 'Game Over'
