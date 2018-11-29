@@ -1,4 +1,5 @@
 class Game
+  attr_reader :attacker, :defender
   @@games = []
 
   def initialize(player_1 = Player.new, player_2 = Player.new)
@@ -23,14 +24,6 @@ class Game
 
   def player_2
     @players.last
-  end
-
-  def attacker
-    @attacker
-  end
-
-  def defender
-    @defender
   end
 
   def winner
