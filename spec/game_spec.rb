@@ -5,13 +5,6 @@ describe Game do
   let(:player_1) { double('Player 1') }
   let(:player_2) { double('Player 2') }
 
-  describe '@@games' do
-    it 'cannot be tampered with' do
-      described_class.games << :invalid
-      expect(described_class.games).not_to include(:invalid)
-    end
-  end
-
   context 'on initialization' do
     it 'has a player 1' do
       expect(game.players.first).to eq(player_1)
@@ -27,6 +20,13 @@ describe Game do
     end
     it 'has no winner by default' do
       expect(game.winner).to eq(nil)
+    end
+  end
+
+  describe '@@games' do
+    it 'cannot be tampered with' do
+      described_class.games << :invalid
+      expect(described_class.games).not_to include(:invalid)
     end
   end
 
