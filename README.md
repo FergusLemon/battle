@@ -22,8 +22,8 @@ For this project Travis CI was used and the build status is passing.
 ### Tests
 Unit tests can be located in the `spec` directory and can be run from the `battle` directory using the command `rake`.  Feature tests can be found in the `spec/features` directory, in these feature test files you'll also find user stories (commented out) that relate to the feature tests.
 
-The Rubocop style guide has been used to inform the style of the code, most recommendations have been updated for and the remaining recommendations can be seen by using the `rubocop` command from the `oystercard` directory.  
-The decision was made to ignore some recommendations relating to line length due to readability and comments due to the simple nature of the objects that make up the codebase.
+The Rubocop style guide has been used to inform the style of the code, most recommendations have been updated for and the remaining recommendations can be seen by using the `rubocop` command from the `battle` directory.  
+The decision was made to ignore some recommendations relating to line length due to readability and comments due to the simple nature of the objects that make up the codebase. A class varibale has been used in the Game class to allow for persistance of state across HTTP requests to different routes.
 
 ### Dependencies
 All dependencies can be found in the `Gemfile` and `Gemfile.lock`.  Bundler was used to manage dependencies.
