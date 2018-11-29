@@ -1,6 +1,6 @@
 require 'sinatra/base'
-require File.join(File.dirname(__FILE__),'lib','player')
-require File.join(File.dirname(__FILE__),'lib','game')
+require File.join(File.dirname(__FILE__), 'lib', 'player')
+require File.join(File.dirname(__FILE__), 'lib', 'game')
 
 class Battle < Sinatra::Base
   configure do
@@ -17,9 +17,9 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    player_1 = Player.new(params[:player_1_name])
-    player_2 = Player.new(params[:player_2_name])
-    Game.new(player_1, player_2)
+    player1 = Player.new(params[:player_1_name])
+    player2 = Player.new(params[:player_2_name])
+    Game.new(player1, player2)
     redirect '/play'
   end
 

@@ -49,7 +49,8 @@ describe Game do
     context 'when the game is over' do
       it 'raises an error' do
         allow(game).to receive(:over?).and_return(true)
-        expect { game.attack(player_1) }.to raise_error( 'You cannot attack, this game is over.' )
+        expect { game.attack(player_1) }.to \
+          raise_error('You cannot attack, this game is over.')
       end
     end
   end

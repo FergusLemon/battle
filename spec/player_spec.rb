@@ -3,7 +3,7 @@ require 'player'
 describe Player do
   let(:name) { 'Pete' }
   let(:mystery_name) { 'Mystery Player' }
-  let(:player) { described_class.new(name)}
+  let(:player) { described_class.new(name) }
   let(:mystery_player) { described_class.new }
   let(:max_points) { described_class::HIT_POINTS }
 

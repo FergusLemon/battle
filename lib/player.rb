@@ -1,10 +1,9 @@
 class Player
-
   HIT_POINTS = 100
   NORMAL_HIT = 10
   DAMAGE_RANGE = (1..100)
 
-  def initialize(name='Mystery Player')
+  def initialize(name = 'Mystery Player')
     @name = name
     @hit_points = HIT_POINTS
   end

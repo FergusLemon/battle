@@ -47,10 +47,10 @@ class Game
   end
 
   def player_on_zero?
-    @players.any? { |p| p.hit_points == 0 }
+    @players.any? { |p| p.hit_points.zero? }
   end
 
   def set_winner
-    @players.reject { |p| p.hit_points == 0 }.first
+    @players.reject { |p| p.hit_points.zero? }.first
   end
 end

@@ -19,18 +19,18 @@ feature 'Attacking opponents' do
     should_see 'Player 2:'
   end
 
-# As Player 1,
-# So I can start to win a game of Battle,
-# I want my attack to reduce Player 2's HP by 10
+  # As Player 1,
+  # So I can start to win a game of Battle,
+  # I want my attack to reduce Player 2's HP by 10
   scenario "An attack reduces a player's hit points" do
     enter_names
     attack_and_return
     should_not_see 'Player 2 Hit Points = 100'
   end
 
-# As Player 1,
-# So I can start to lose a game of Battle,
-# I want Player 2's attack to reduce my HP by 10
+  # As Player 1,
+  # So I can start to lose a game of Battle,
+  # I want Player 2's attack to reduce my HP by 10
   scenario "An attack reduces a player's hit points" do
     enter_names
     2.times { attack_and_return }

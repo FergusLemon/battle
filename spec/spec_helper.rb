@@ -19,7 +19,7 @@ require 'rspec'
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 require File.join(File.dirname(__FILE__), '/support', 'helpers.rb')
 
-ENV["RACK_ENV"] = "test"
+ENV['RACK_ENV'] = 'test'
 Capybara.app = Battle
 
 RSpec.configure do |config|

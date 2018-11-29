@@ -8,9 +8,9 @@ group :development, :test do
 end
 
 group :test do
-  gem 'rake'
-  gem 'sinatra'
   gem 'capybara'
+  gem 'rake'
   gem 'selenium-webdriver'
   gem 'shotgun'
+  gem 'sinatra'
 end

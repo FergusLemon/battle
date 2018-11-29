@@ -1,5 +1,4 @@
 module MyCapybaraHelper
-
   def enter_names(*names)
     visit '/'
     fill_in 'player1', with: names[0] ||= 'Mystery Player'
@@ -17,8 +16,8 @@ module MyCapybaraHelper
     click_on 'Back To Battle'
   end
 
-  #thanks to Yanis Triandaphilov for the recommendation, sourced from his blog
-  #https://blog.codeship.com/principles-of-effective-testing-with-capybara/
+  # thanks to Yanis Triandaphilov for the recommendation, sourced from his blog
+  # https://blog.codeship.com/principles-of-effective-testing-with-capybara/
   def should_see(text)
     expect(page).to have_content(text)
   end
