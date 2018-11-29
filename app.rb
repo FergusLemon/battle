@@ -24,16 +24,16 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    if @game.over?
-      redirect '/result'
-    else
-      erb :play
-    end
+    erb :play
   end
 
   get '/attack' do
-    @game.attack(@game.defender)
-    erb :attack
+    if @game.over?
+      redirect '/result'
+    else
+      @game.attack(@game.defender)
+      erb :attack
+    end
   end
 
   get '/result' do
