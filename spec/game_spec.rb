@@ -25,6 +25,9 @@ describe Game do
     it 'has an defender' do
       expect(game.defender).to eq(player_2)
     end
+    it 'has no winner by default' do
+      expect(game.winner).to eq(nil)
+    end
   end
 
   describe '#attack' do
